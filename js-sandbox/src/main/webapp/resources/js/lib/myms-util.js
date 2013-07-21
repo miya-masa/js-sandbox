@@ -2,6 +2,7 @@
  * @namespace
  */
 var myms = {};
+
 /**
  * 名前空間にユーティリティをセットする.
  */
@@ -14,10 +15,10 @@ var myms = {};
 	var log = function() {
 		try {
 			console.log.apply(console, arguments);
-		} catch (e) {
+		} catch (e1) {
 			try {
 				opera.postError.apply(opera, arguments);
-			} catch (e) {
+			} catch (e2) {
 				alert(Array.prototype.join.call(arguments, " "));
 			}
 		}
