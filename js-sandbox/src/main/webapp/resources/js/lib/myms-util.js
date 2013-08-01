@@ -1,5 +1,5 @@
 /**
- * @namespace
+ * @namespace [myms]
  */
 var myms = {};
 
@@ -11,6 +11,8 @@ var myms = {};
 
 	/**
 	 * ログメソッド.
+	 * 
+	 * @memberOf myms
 	 */
 	var log = function() {
 		try {
