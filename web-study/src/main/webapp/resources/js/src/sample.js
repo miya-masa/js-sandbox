@@ -1,5 +1,6 @@
 $(function() {
     var db = webstudy.sampleDB;
+    var util = webstudy.util;
     db.open();
 
     /**

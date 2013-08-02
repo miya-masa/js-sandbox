@@ -1,10 +1,12 @@
-/**
- * @namespace
- */
-webstudy.sampleDB = {};
-
-(function(sampleDB) {
-
+(function(window) {
+    
+    var webstudy = window.webstudy;
+    if (webstudy === undefined) {
+	webstudy = {};
+    }
+    
+    var sampleDB = webstudy.sampleDB = {};
+    
     /**
      * 
      * @param {String} txAttr
@@ -73,7 +75,7 @@ webstudy.sampleDB = {};
 		if (request.result === undefined) {
 		    alert("指定されたキーはありません");
 		} else {
-		    alert(request.result || "指定されたキーはありません");
+		    alert(request.result.value || "指定されたキーはありません");
 		}
 	    } else {
 		onsuccess(request);
@@ -100,4 +102,5 @@ webstudy.sampleDB = {};
 	    }
 	};
     };
-})(webstudy.sampleDB);
+    window.webstudy = webstudy;
+})(window);

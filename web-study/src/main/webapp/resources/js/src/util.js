@@ -1,6 +1,10 @@
-var webstudy = {};
-webstudy.util = (function(window) {
-    var util = {
+(function(window) {
+
+    var webstudy = window.webstudy;
+    if (webstudy === undefined) {
+	webstudy = {};
+    }
+    webstudy.util = {
 	getJson : function() {
 	    return {
 		someBoolean : true,
@@ -13,5 +17,5 @@ webstudy.util = (function(window) {
 	}
     };
 
-    return util;
+    window.webstudy = webstudy;
 })(window);
