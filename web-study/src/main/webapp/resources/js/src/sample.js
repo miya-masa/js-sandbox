@@ -1,4 +1,6 @@
 $(function() {
+    var db = webstudy.sampleDB;
+    db.open();
 
     /**
      * 結果領域をクリアする.
@@ -17,6 +19,16 @@ $(function() {
 	var $target = $("<li>");
 	$target.text(text).appendTo($result);
     }
+    /**
+     * ストレージに値を保存する.
+     * 
+     * @param {sessionStrage|localStorage} storage
+     */
+    function appendStrage(storage) {
+	var value = storage.getItem("key") || 0;
+	value++;
+	storage.setItem("key", value++);
+    }
 
     // イベントハンドラ
 
@@ -28,6 +40,9 @@ $(function() {
     $("#button-clear-id").click(function() {
 	console.log("#clear-clicked!");
 	clearResult();
+	$.removeCookie("key", null);
+	localStorage.removeItem("key");
+	sessionStorage.removeItem("key");
     });
 
     $("#button-getJson-id").click(function() {
@@ -46,14 +61,22 @@ $(function() {
 	}
     });
 
-    $("#button-appendStorage-id").click(function() {
-
-	localStorage.setItem("key", "storageValue");
+    $("#button-appendLocalStorage-id").click(function() {
+	appendStrage(localStorage);
 	appendResult("ローカルストレージに保存!");
     });
 
+    $("#button-appendSessionStorage-id").click(function() {
+	appendStrage(sessionStorage);
+	appendResult("セッションストレージに保存!");
+    });
+
     $("#button-appendCookie-id").click(function() {
-	$.cookie("key", "cookieValue");
+	var strage = {
+	    getItem : $.cookie,
+	    setItem : $.cookie
+	};
+	appendStrage(strage);
 	appendResult("クッキーを保存!");
     });
 });

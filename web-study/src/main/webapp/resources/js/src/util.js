@@ -1,4 +1,5 @@
-var util = (function(window) {
+var webstudy = {};
+webstudy.util = (function(window) {
     var util = {
 	getJson : function() {
 	    return {
@@ -13,5 +14,4 @@ var util = (function(window) {
     };
 
     return util;
-
 })(window);
