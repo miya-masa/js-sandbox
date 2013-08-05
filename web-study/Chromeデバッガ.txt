@@ -1,0 +1,129 @@
+DOMとスタイルの探索
+	DOMをツリー構造で閲覧
+	インスペクトモード
+	Computed Styleセクション
+		説明のみ
+	Stylesセクション
+		スタイルの変更
+		スタイルの適用解除
+		カラーピックアップ
+	Metrics
+		パディングの変更
+	Properties
+		DOMプロパティの操作
+	DOMブレイクポイント
+	イベントリスナー
+	検索
+	(scssの解析もできるようになるかも)
+
+ストレージの探索
+	IndexedDB
+		ページ遷移
+		スタートページ
+		DBのデータクリア
+	WebSQL
+		
+	Cookies
+		閲覧
+		同じオリジン単位で削除可能
+		Cookie属性の閲覧
+		単一削除
+		全て削除
+		
+	Application Cache
+	LocalStrageとSession Strage
+		削除、追加、更新
+		
+	リソース探索
+		メインフレーム
+		スクリプト
+		画像などなど。。。
+
+ネットワークパフォーマンス監視
+	カラムについて
+	非表示のカラムの表示(右クリック)
+	TimeLineのソート
+	レコードのフィルタリング
+	Httpリクエスト、レスポンス情報
+	timing
+	PageSpeedInsights
+	
+JavaScriptのデバッグ
+	実行制御 F10 F8 F11
+	ブレークポイント
+	条件付きブレークポイント
+	(小技紹介)
+	ブレーク時のコンソールについて
+	例外ブレーク３種類
+	DOM変化のブレーク
+	XHRのブレーク
+	イベントリスナのブレーク
+	ライブエディター
+	prettyプリント(minの整形)
+	sourcemap対応
+	
+TimeLineを利用したパフォーマンス分析
+	各項目の説明、見方
+	メモリ監視
+	css監視
+
+Mobileエミュレーション
+	UserAgent切り替え、画面大きさ修正
+	GeoLocation変更
+	touchイベント
+	デバイスの向き指定
+		α-画面から自分に垂直
+		β-画面から横方向
+		γ-画面から縦方向
+	
+	
+コンソールの使い方
+	画面分割orConsoleパネル
+	画面クリア
+	Log XMLHttpRequest Preserve~(他画面でもコンソールの履歴を保存するか)
+	consoleAPI
+		console.log
+		console.error
+		console.warn
+		console.assert 失敗はエラーログ
+		console.group
+		console.groupEnd
+			グループはネストも可能
+		console.groupCollapsed
+			グループを広げる
+		consoleDir
+			console.logと%Oと同等
+		console.time
+		console.timeEnd
+			時間計測
+		console.timeStamp
+			引数の名前でTimeLineにスタンプする
+		debugger;
+			ブレーク
+			フィルタリングログ
+		error
+		warn
+		logs
+		debug
+	フォーマット
+		%s->フォーマットString
+		%d %i -> フォーマットInteger
+		%f -> 小数点付きの値
+		%o -> DOMエレメント
+		%O -> jsオブジェクト
+		%c -> 出力文字列にcssが適用される
+	DOMの取得
+		$()->document.querySelector
+		$$()->document.querySelectorAll
+		$x()->->XPathで取得
+		inspect($_) -> 最後の評価プロパティ
+		$0~4 -> 最後に選択したObjectの順番に保存
+	monitorEvent
+	unmonitorEvents
+		domオブジェクトとイベント名でモニタリング
+		解除はDOMオブジェクトを指定する
+	profile
+	profileEnd
+		プロファイルを開始/終了する。
+
+

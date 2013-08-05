@@ -5,7 +5,7 @@
 	if (webstudy === undefined) {
 		webstudy = {};
 	}
-
+	
 	var sampleDB = webstudy.sampleDB = {};
 
 	/**

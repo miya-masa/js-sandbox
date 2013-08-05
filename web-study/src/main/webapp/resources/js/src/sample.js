@@ -1,6 +1,7 @@
 /* global webstudy */
 $(function() {
 	"use strict";
+
 	var db = webstudy.sampleDB;
 	var util = webstudy.util;
 	db.open();
@@ -46,6 +47,7 @@ $(function() {
 		$.removeCookie("key", null);
 		localStorage.removeItem("key");
 		sessionStorage.removeItem("key");
+		db.clearAllData();
 	});
 
 	$("#button-getJson-id").click(function() {
@@ -81,5 +83,26 @@ $(function() {
 		};
 		appendStrage(strage);
 		appendResult("クッキーを保存!");
+	});
+
+	$("#button-appendIndexedDb-id").click(function() {
+		for ( var int = 0; int < 100; int++) {
+			var record = {
+				key : int,
+				value : "value"
+			};
+			db.addData(record);
+		}
+
+		appendResult("IndexedDBに保存!");
+	});
+
+	$(window).bind('devicemotion', function(event) {
+		ax = event.originalEvent.accelerationIncludingGravity.x;
+		ay = event.originalEvent.accelerationIncludingGravity.y;
+		az = event.originalEvent.accelerationIncludingGravity.z;
+		appendResult("x軸 :" + ax);
+		appendResult("y軸:" + ay);
+		appendResult("z軸:" + az);
 	});
 });
