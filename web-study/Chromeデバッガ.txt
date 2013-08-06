@@ -1,129 +1,129 @@
-DOM‚ÆƒXƒ^ƒCƒ‹‚Ì’Tõ
-	DOM‚ðƒcƒŠ[\‘¢‚Å‰{——
-	ƒCƒ“ƒXƒyƒNƒgƒ‚[ƒh
-	Computed StyleƒZƒNƒVƒ‡ƒ“
-		à–¾‚Ì‚Ý
-	StylesƒZƒNƒVƒ‡ƒ“
-		ƒXƒ^ƒCƒ‹‚Ì•ÏX
-		ƒXƒ^ƒCƒ‹‚Ì“K—p‰ðœ
-		ƒJƒ‰[ƒsƒbƒNƒAƒbƒv
+DOMã¨ã‚¹ã‚¿ã‚¤ãƒ«ã®æŽ¢ç´¢
+	DOMã‚’ãƒ„ãƒªãƒ¼æ§‹é€ ã§é–²è¦§
+	ã‚¤ãƒ³ã‚¹ãƒšã‚¯ãƒˆãƒ¢ãƒ¼ãƒ‰
+	Computed Styleã‚»ã‚¯ã‚·ãƒ§ãƒ³
+		èª¬æ˜Žã®ã¿
+	Stylesã‚»ã‚¯ã‚·ãƒ§ãƒ³
+		ã‚¹ã‚¿ã‚¤ãƒ«ã®å¤‰æ›´
+		ã‚¹ã‚¿ã‚¤ãƒ«ã®é©ç”¨è§£é™¤
+		ã‚«ãƒ©ãƒ¼ãƒ”ãƒƒã‚¯ã‚¢ãƒƒãƒ—
 	Metrics
-		ƒpƒfƒBƒ“ƒO‚Ì•ÏX
+		ãƒ‘ãƒ‡ã‚£ãƒ³ã‚°ã®å¤‰æ›´
 	Properties
-		DOMƒvƒƒpƒeƒB‚Ì‘€ì
-	DOMƒuƒŒƒCƒNƒ|ƒCƒ“ƒg
-	ƒCƒxƒ“ƒgƒŠƒXƒi[
-	ŒŸõ
-	(scss‚Ì‰ðÍ‚à‚Å‚«‚é‚æ‚¤‚É‚È‚é‚©‚à)
+		DOMãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®æ“ä½œ
+	DOMãƒ–ãƒ¬ã‚¤ã‚¯ãƒã‚¤ãƒ³ãƒˆ
+	ã‚¤ãƒ™ãƒ³ãƒˆãƒªã‚¹ãƒŠãƒ¼
+	æ¤œç´¢
+	(scssã®è§£æžã‚‚ã§ãã‚‹ã‚ˆã†ã«ãªã‚‹ã‹ã‚‚)
 
-ƒXƒgƒŒ[ƒW‚Ì’Tõ
+ã‚¹ãƒˆãƒ¬ãƒ¼ã‚¸ã®æŽ¢ç´¢
 	IndexedDB
-		ƒy[ƒW‘JˆÚ
-		ƒXƒ^[ƒgƒy[ƒW
-		DB‚Ìƒf[ƒ^ƒNƒŠƒA
+		ãƒšãƒ¼ã‚¸é·ç§»
+		ã‚¹ã‚¿ãƒ¼ãƒˆãƒšãƒ¼ã‚¸
+		DBã®ãƒ‡ãƒ¼ã‚¿ã‚¯ãƒªã‚¢
 	WebSQL
 		
 	Cookies
-		‰{——
-		“¯‚¶ƒIƒŠƒWƒ“’PˆÊ‚Åíœ‰Â”\
-		Cookie‘®«‚Ì‰{——
-		’Pˆêíœ
-		‘S‚Äíœ
+		é–²è¦§
+		åŒã˜ã‚ªãƒªã‚¸ãƒ³å˜ä½ã§å‰Šé™¤å¯èƒ½
+		Cookieå±žæ€§ã®é–²è¦§
+		å˜ä¸€å‰Šé™¤
+		å…¨ã¦å‰Šé™¤
 		
 	Application Cache
-	LocalStrage‚ÆSession Strage
-		íœA’Ç‰ÁAXV
+	LocalStrageã¨Session Strage
+		å‰Šé™¤ã€è¿½åŠ ã€æ›´æ–°
 		
-	ƒŠƒ\[ƒX’Tõ
-		ƒƒCƒ“ƒtƒŒ[ƒ€
-		ƒXƒNƒŠƒvƒg
-		‰æ‘œ‚È‚Ç‚È‚ÇBBB
+	ãƒªã‚½ãƒ¼ã‚¹æŽ¢ç´¢
+		ãƒ¡ã‚¤ãƒ³ãƒ•ãƒ¬ãƒ¼ãƒ 
+		ã‚¹ã‚¯ãƒªãƒ—ãƒˆ
+		ç”»åƒãªã©ãªã©ã€‚ã€‚ã€‚
 
-ƒlƒbƒgƒ[ƒNƒpƒtƒH[ƒ}ƒ“ƒXŠÄŽ‹
-	ƒJƒ‰ƒ€‚É‚Â‚¢‚Ä
-	”ñ•\Ž¦‚ÌƒJƒ‰ƒ€‚Ì•\Ž¦(‰EƒNƒŠƒbƒN)
-	TimeLine‚Ìƒ\[ƒg
-	ƒŒƒR[ƒh‚ÌƒtƒBƒ‹ƒ^ƒŠƒ“ƒO
-	HttpƒŠƒNƒGƒXƒgAƒŒƒXƒ|ƒ“ƒXî•ñ
+ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ãƒ‘ãƒ•ã‚©ãƒ¼ãƒžãƒ³ã‚¹ç›£è¦–
+	ã‚«ãƒ©ãƒ ã«ã¤ã„ã¦
+	éžè¡¨ç¤ºã®ã‚«ãƒ©ãƒ ã®è¡¨ç¤º(å³ã‚¯ãƒªãƒƒã‚¯)
+	TimeLineã®ã‚½ãƒ¼ãƒˆ
+	ãƒ¬ã‚³ãƒ¼ãƒ‰ã®ãƒ•ã‚£ãƒ«ã‚¿ãƒªãƒ³ã‚°
+	Httpãƒªã‚¯ã‚¨ã‚¹ãƒˆã€ãƒ¬ã‚¹ãƒãƒ³ã‚¹æƒ…å ±
 	timing
 	PageSpeedInsights
 	
-JavaScript‚ÌƒfƒoƒbƒO
-	ŽÀs§Œä F10 F8 F11
-	ƒuƒŒ[ƒNƒ|ƒCƒ“ƒg
-	ðŒ•t‚«ƒuƒŒ[ƒNƒ|ƒCƒ“ƒg
-	(¬‹ZÐ‰î)
-	ƒuƒŒ[ƒNŽž‚ÌƒRƒ“ƒ\[ƒ‹‚É‚Â‚¢‚Ä
-	—áŠOƒuƒŒ[ƒN‚RŽí—Þ
-	DOM•Ï‰»‚ÌƒuƒŒ[ƒN
-	XHR‚ÌƒuƒŒ[ƒN
-	ƒCƒxƒ“ƒgƒŠƒXƒi‚ÌƒuƒŒ[ƒN
-	ƒ‰ƒCƒuƒGƒfƒBƒ^[
-	prettyƒvƒŠƒ“ƒg(min‚Ì®Œ`)
-	sourcemap‘Î‰ž
+JavaScriptã®ãƒ‡ãƒãƒƒã‚°
+	å®Ÿè¡Œåˆ¶å¾¡ F10 F8 F11
+	ãƒ–ãƒ¬ãƒ¼ã‚¯ãƒã‚¤ãƒ³ãƒˆ
+	æ¡ä»¶ä»˜ããƒ–ãƒ¬ãƒ¼ã‚¯ãƒã‚¤ãƒ³ãƒˆ
+	(å°æŠ€ç´¹ä»‹)
+	ãƒ–ãƒ¬ãƒ¼ã‚¯æ™‚ã®ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã«ã¤ã„ã¦
+	ä¾‹å¤–ãƒ–ãƒ¬ãƒ¼ã‚¯ï¼“ç¨®é¡ž
+	DOMå¤‰åŒ–ã®ãƒ–ãƒ¬ãƒ¼ã‚¯
+	XHRã®ãƒ–ãƒ¬ãƒ¼ã‚¯
+	ã‚¤ãƒ™ãƒ³ãƒˆãƒªã‚¹ãƒŠã®ãƒ–ãƒ¬ãƒ¼ã‚¯
+	ãƒ©ã‚¤ãƒ–ã‚¨ãƒ‡ã‚£ã‚¿ãƒ¼
+	prettyãƒ—ãƒªãƒ³ãƒˆ(minã®æ•´å½¢)
+	sourcemapå¯¾å¿œ
 	
-TimeLine‚ð—˜—p‚µ‚½ƒpƒtƒH[ƒ}ƒ“ƒX•ªÍ
-	Še€–Ú‚Ìà–¾AŒ©•û
-	ƒƒ‚ƒŠŠÄŽ‹
-	cssŠÄŽ‹
+TimeLineã‚’åˆ©ç”¨ã—ãŸãƒ‘ãƒ•ã‚©ãƒ¼ãƒžãƒ³ã‚¹åˆ†æž
+	å„é …ç›®ã®èª¬æ˜Žã€è¦‹æ–¹
+	ãƒ¡ãƒ¢ãƒªç›£è¦–
+	cssç›£è¦–
 
-MobileƒGƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“
-	UserAgentØ‚è‘Ö‚¦A‰æ–Ê‘å‚«‚³C³
-	GeoLocation•ÏX
-	touchƒCƒxƒ“ƒg
-	ƒfƒoƒCƒX‚ÌŒü‚«Žw’è
-		ƒ¿-‰æ–Ê‚©‚çŽ©•ª‚É‚’¼
-		ƒÀ-‰æ–Ê‚©‚ç‰¡•ûŒü
-		ƒÁ-‰æ–Ê‚©‚çc•ûŒü
+Mobileã‚¨ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³
+	UserAgentåˆ‡ã‚Šæ›¿ãˆã€ç”»é¢å¤§ãã•ä¿®æ­£
+	GeoLocationå¤‰æ›´
+	touchã‚¤ãƒ™ãƒ³ãƒˆ
+	ãƒ‡ãƒã‚¤ã‚¹ã®å‘ãæŒ‡å®š
+		Î±-ç”»é¢ã‹ã‚‰è‡ªåˆ†ã«åž‚ç›´
+		Î²-ç”»é¢ã‹ã‚‰æ¨ªæ–¹å‘
+		Î³-ç”»é¢ã‹ã‚‰ç¸¦æ–¹å‘
 	
 	
-ƒRƒ“ƒ\[ƒ‹‚ÌŽg‚¢•û
-	‰æ–Ê•ªŠ„orConsoleƒpƒlƒ‹
-	‰æ–ÊƒNƒŠƒA
-	Log XMLHttpRequest Preserve~(‘¼‰æ–Ê‚Å‚àƒRƒ“ƒ\[ƒ‹‚Ì—š—ð‚ð•Û‘¶‚·‚é‚©)
+ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã®ä½¿ã„æ–¹
+	ç”»é¢åˆ†å‰²orConsoleãƒ‘ãƒãƒ«
+	ç”»é¢ã‚¯ãƒªã‚¢
+	Log XMLHttpRequest Preserve~(ä»–ç”»é¢ã§ã‚‚ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã®å±¥æ­´ã‚’ä¿å­˜ã™ã‚‹ã‹)
 	consoleAPI
 		console.log
 		console.error
 		console.warn
-		console.assert Ž¸”s‚ÍƒGƒ‰[ƒƒO
+		console.assert å¤±æ•—ã¯ã‚¨ãƒ©ãƒ¼ãƒ­ã‚°
 		console.group
 		console.groupEnd
-			ƒOƒ‹[ƒv‚ÍƒlƒXƒg‚à‰Â”\
+			ã‚°ãƒ«ãƒ¼ãƒ—ã¯ãƒã‚¹ãƒˆã‚‚å¯èƒ½
 		console.groupCollapsed
-			ƒOƒ‹[ƒv‚ðL‚°‚é
+			ã‚°ãƒ«ãƒ¼ãƒ—ã‚’åºƒã’ã‚‹
 		consoleDir
-			console.log‚Æ%O‚Æ“¯“™
+			console.logã¨%Oã¨åŒç­‰
 		console.time
 		console.timeEnd
-			ŽžŠÔŒv‘ª
+			æ™‚é–“è¨ˆæ¸¬
 		console.timeStamp
-			ˆø”‚Ì–¼‘O‚ÅTimeLine‚ÉƒXƒ^ƒ“ƒv‚·‚é
+			å¼•æ•°ã®åå‰ã§TimeLineã«ã‚¹ã‚¿ãƒ³ãƒ—ã™ã‚‹
 		debugger;
-			ƒuƒŒ[ƒN
-			ƒtƒBƒ‹ƒ^ƒŠƒ“ƒOƒƒO
+			ãƒ–ãƒ¬ãƒ¼ã‚¯
+			ãƒ•ã‚£ãƒ«ã‚¿ãƒªãƒ³ã‚°ãƒ­ã‚°
 		error
 		warn
 		logs
 		debug
-	ƒtƒH[ƒ}ƒbƒg
-		%s->ƒtƒH[ƒ}ƒbƒgString
-		%d %i -> ƒtƒH[ƒ}ƒbƒgInteger
-		%f -> ¬”“_•t‚«‚Ì’l
-		%o -> DOMƒGƒŒƒƒ“ƒg
-		%O -> jsƒIƒuƒWƒFƒNƒg
-		%c -> o—Í•¶Žš—ñ‚Écss‚ª“K—p‚³‚ê‚é
-	DOM‚ÌŽæ“¾
+	ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆ
+		%s->ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆString
+		%d %i -> ãƒ•ã‚©ãƒ¼ãƒžãƒƒãƒˆInteger
+		%f -> å°æ•°ç‚¹ä»˜ãã®å€¤
+		%o -> DOMã‚¨ãƒ¬ãƒ¡ãƒ³ãƒˆ
+		%O -> jsã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+		%c -> å‡ºåŠ›æ–‡å­—åˆ—ã«cssãŒé©ç”¨ã•ã‚Œã‚‹
+	DOMã®å–å¾—
 		$()->document.querySelector
 		$$()->document.querySelectorAll
-		$x()->->XPath‚ÅŽæ“¾
-		inspect($_) -> ÅŒã‚Ì•]‰¿ƒvƒƒpƒeƒB
-		$0~4 -> ÅŒã‚É‘I‘ð‚µ‚½Object‚Ì‡”Ô‚É•Û‘¶
+		$x()->->XPathã§å–å¾—
+		inspect($_) -> æœ€å¾Œã®è©•ä¾¡ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£
+		$0~4 -> æœ€å¾Œã«é¸æŠžã—ãŸObjectã®é †ç•ªã«ä¿å­˜
 	monitorEvent
 	unmonitorEvents
-		domƒIƒuƒWƒFƒNƒg‚ÆƒCƒxƒ“ƒg–¼‚Åƒ‚ƒjƒ^ƒŠƒ“ƒO
-		‰ðœ‚ÍDOMƒIƒuƒWƒFƒNƒg‚ðŽw’è‚·‚é
+		domã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã¨ã‚¤ãƒ™ãƒ³ãƒˆåã§ãƒ¢ãƒ‹ã‚¿ãƒªãƒ³ã‚°
+		è§£é™¤ã¯DOMã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŒ‡å®šã™ã‚‹
 	profile
 	profileEnd
-		ƒvƒƒtƒ@ƒCƒ‹‚ðŠJŽn/I—¹‚·‚éB
+		ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹å§‹/çµ‚äº†ã™ã‚‹ã€‚
 
 

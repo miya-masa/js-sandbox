@@ -6,9 +6,18 @@
 </head>
 <body>
 	<div id="qunit"></div>
-	<div id="qunit-fixture"></div>
-	<div id="sample" style="display: none">testtest</div>
+	<div id="qunit-fixture">
+		<div id="sample" style="display: none">testtest</div>
+	</div>
 	<script src="resources/js/lib/qunit-1.12.0.js"></script>
+	<script src="resources/js/lib/qunit-reporter-junit.js"></script>
+	<script type="text/javascript">
+	<!--
+		QUnit.jUnitReport = function(report) {
+			console.log(report.xml);
+		};
+	//-->
+	</script>
 	<script src="resources/js/lib/myms-util.js"></script>
 	<script src="resources/js/test/test.js"></script>
 	<script src="resources/js/test/scope-test.js"></script>
