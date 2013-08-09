@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="Chrome_280150095_Windows.dom test" errors="0" failures="1" tests="1" time="0.018">
+<testcase classname="Chrome_280150095_Windows.dom test" name="testButtonClick" time="0.018">
+<failure type="failed" message="[{&quot;message&quot;:&quot;expected true but was null&quot;,&quot;name&quot;:&quot;AssertError&quot;,&quot;stack&quot;:&quot;Error: expected true but was null\n    at fail (http://localhost:4224/static/runner.js:682:13)\n    at assertEquals (http://localhost:4224/static/runner.js:818:5)\n    at Object.TestCase.testButtonClick (http://localhost:4224/test/C:/Users/mamiyauc/workspace/jstd-sinon-sample/src/main/webapp/resources/js/test/src/jstd-test.js:26:3)\n    at jstestdriver.plugins.TestRunnerPlugin.runTest (http://localhost:4224/static/runner.js:5403:33)\n    at bound (http://localhost:4224/static/jstestdrivernamespace.js:71:17)\n    at http://localhost:4224/static/runner.js:5319:14\n    at nestedFunction (http://localhost:4224/static/runner.js:5297:7)&quot;}]">Error: expected true but was null&#13;
+    at Object.TestCase.testButtonClick (http://localhost:4224/test/C:/Users/mamiyauc/workspace/jstd-sinon-sample/src/main/webapp/resources/js/test/src/jstd-test.js:26:3)&#13;
+&#13;
+</failure>
+</testcase>
+<system-out><![CDATA[[LOG] JsTestDriver <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+<title>Error 404 NOT_FOUND</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /test/serve/fixture.html. Reason:
+<pre>    NOT_FOUND</pre></p><hr /><i><small>Powered by Jetty://</small></i><br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+<br/>                                                
+
+</body>
+</html>
+]]></system-out>
+</testsuite>
