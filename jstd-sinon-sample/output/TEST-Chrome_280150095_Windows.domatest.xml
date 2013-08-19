@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="Chrome_280150095_Windows.dom test" errors="0" failures="0" tests="2" time="0.018">
+<testcase classname="Chrome_280150095_Windows.dom test" name="testButtonClick" time="0.012"/>
+<testcase classname="Chrome_280150095_Windows.dom test" name="testButtonClick2" time="0.006"/>
+<system-out><![CDATA[[LOG] JsTestDriver <div id="div-id">divdivdiv</div>
+<button id="button-id">button</button>
+[LOG] JsTestDriver <div id="div-id">divdivdiv</div>
+<button id="button-id">button</button>
+]]></system-out>
+</testsuite>
