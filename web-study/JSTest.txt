@@ -102,11 +102,14 @@ JSTestDriver
 			SinonJSの機能を利用し初期化メソッドを実行
 		TDDでテストコードを書く
 	非同期のテスト
+		queue(function(callbacks){})内にテストを記述
+		callbacks.add(function)で引数のfunctionが起動されない限りqueue内のファンクションは次を実行しない
+		queue()を複数定義し非同期のテストを行う
+		callbacks.noop()でなにも処理をしない関数を準備
+		callbacks.add(function,count)でfunctionが何回呼ばれたら次のqueueを処理するか決定できる
+		callbacks.addErrback()これが呼ばれたらテスト失敗
 		
 		
-		
-
-
 
 テスト概要5分
 QUnitの使い方50分
