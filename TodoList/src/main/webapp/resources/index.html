@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TODOリスト 宮内</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<script type="text/javascript" src="js/lib/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/src/todolist.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="page-header">
+        <h1>TODOリスト 宮内</h1>
+      </div>
+    </header>
+    <article>
+      <div class="todo-table">
+        <h3>TODO リスト</h3>
+        <table class="table table-striped">
+          <tr>
+            <th>No</th>
+            <th>期限</th>
+            <th>タスク</th>
+            <th><button id="btn-remove-all-todo">全削除</button></th>
+          </tr>
+          <tbody id="table-todolist">
+            <tr>
+              <td>1</td>
+              <td>2013/12/01</td>
+              <td>Web技術施策提出</td>
+              <td>
+                <button>削除</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>2013/12/01</td>
+              <td>Web技術施策提出</td>
+              <td>
+                <button>削除</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>2013/12/01</td>
+              <td>Web技術施策提出</td>
+              <td>
+                <button>削除</button>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>2013/12/01</td>
+              <td>Web技術施策提出</td>
+              <td>
+                <button>削除</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="regist-todo">
+        <h3>TODO登録</h3>
+        <form class="form-inline" role="form">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputEmail2">期限</label> <input id="form-regist-limit" type="date" class="form-control" id="exampleInputEmail2"
+              placeholder="date">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputPassword2">タスク</label> <input id="form-regist-task" type="input" class="form-control" id="exampleInputPassword2"
+              placeholder="task">
+          </div>
+          <button id="btn-regist" class="btn btn-default">登録</button>
+        </form>
+      </div>
+    </article>
+    <footer></footer>
+  </div>
+</body>
+</html>
