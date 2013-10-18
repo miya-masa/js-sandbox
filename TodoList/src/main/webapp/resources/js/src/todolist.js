@@ -13,19 +13,27 @@ todolist.logic = (function(window) {
 	// 公開するロジック
 	var logic = {
 		/**
+		 * 登録時のIDを取得する
+		 * 
+		 * @returns ID
+		 */
+		getNextId : function() {
+			var id = +localStorage.getItem(KEY_SEQ_TODO_STRAGE);
+			localStorage.setItem(KEY_SEQ_TODO_STRAGE, id + 1);
+			return id;
+		},
+		/**
 		 * 引数のtodoを保存する。todoのプロパティは期限(limit)とタスク内容(task)
 		 * 
 		 * @memberOf todolist.logic
-		 * @param {Object String} todo limitとtaskを持つプロパティ
+		 * @param {Object} todo key、limit、taskを持つプロパティ
 		 */
 		saveTodo : function(todo) {
 			var target = todo;
 			if (typeof target === 'object') {
 				target = JSON.stringify(todo);
 			}
-			var seq = localStorage.getItem(KEY_SEQ_TODO_STRAGE);
-			localStorage.setItem(seq, target);
-			localStorage.setItem(KEY_SEQ_TODO_STRAGE, +seq + 1);
+			localStorage.setItem(todo.key, target);
 		},
 		/**
 		 * todoを取得する.
@@ -35,7 +43,6 @@ todolist.logic = (function(window) {
 		 */
 		getTodo : function(key) {
 			var todo = JSON.parse(localStorage.getItem(key));
-			todo.key = key;
 			return todo;
 		},
 		/**
@@ -69,7 +76,7 @@ todolist.logic = (function(window) {
 				allTodo.push(this.getTodo(key));
 			}
 			return allTodo;
-		},
+		}
 	};
 	return logic;
 })(window);
@@ -82,6 +89,7 @@ todolist.controller = (function(window) {
 	 * DOM構造を作成するオブジェクト.
 	 */
 	var _tableManipulator = {
+
 		/**
 		 * 引数の文字列をHTMLエスケープする.
 		 * 
@@ -95,20 +103,38 @@ todolist.controller = (function(window) {
 		 * 
 		 * @param {Array} todoList limit、taskを持つオブジェクト配列
 		 */
-		buildTodoTable : function(todoList) {
+		appendAllTodo : function(todoList) {
 			var appendHtml = '<tbody id = "table-todolist">';
 			for (var i = 0; i < todoList.length; i++) {
 				var todo = todoList[i];
-				appendHtml += '<tr>';
-				appendHtml += '<td>' + (i + 1) + '</td>';
-				appendHtml += '<td>' + this.escapeHtml(todo.limit) + '</td>';
-				appendHtml += '<td>' + this.escapeHtml(todo.task) + '</td>';
-				appendHtml += '<td><button id  ="btn-remove-todo-' + todo.key + '" class="btn-remove-todo">削除</button></td>';
-				appendHtml += '</tr>';
+				appendHtml += this._buildTodoHtmlStr(i + 1, todo);
+				this.maxNo = i + 1;
 			}
 			appendHtml += '</tbody>';
 			$('#table-todolist').replaceWith(appendHtml);
+		},
+
+		/**
+		 * TODOテーブルのDOM構造を作成する.
+		 * 
+		 * @param {Array} todoList limit、taskを持つオブジェクト配列
+		 */
+		appendTodo : function(todo) {
+			var appendHtml = this._buildTodoHtmlStr($('#table-todolist').children().length + 1, todo);
+			this.maxNo++;
+			$('#table-todolist').append(appendHtml);
+		},
+
+		_buildTodoHtmlStr : function(no, todo) {
+			var appendHtml = '<tr>';
+			appendHtml += '<td>' + no + '</td>';
+			appendHtml += '<td>' + this.escapeHtml(todo.limit) + '</td>';
+			appendHtml += '<td>' + this.escapeHtml(todo.task) + '</td>';
+			appendHtml += '<td><button id  ="btn-remove-todo-' + todo.key + '" class="btn-remove-todo">削除</button></td>';
+			appendHtml += '</tr>';
+			return appendHtml;
 		}
+
 	};
 	// 公開するコントローラ
 	var controller = {
@@ -121,12 +147,16 @@ todolist.controller = (function(window) {
 			// コントローラを一時変数に格納しイベントハンドラ内で利用できるようにしておく
 			var self = this;
 			$('#btn-regist').on('click', function() {
+				console.time('start');
 				var todo = {
+					key : todoLogic.getNextId(),
 					task : $('#form-regist-task').val(),
 					limit : $('#form-regist-limit').val()
 				};
 				todoLogic.saveTodo(todo);
-				self.render();
+				_tableManipulator.appendTodo(todo);
+				console.timeEnd('start');
+				return false;
 			});
 
 			$(document).on('click', '.btn-remove-todo', function() {
@@ -147,7 +177,7 @@ todolist.controller = (function(window) {
 		 * Todoリストのレンダリングを行う.
 		 */
 		render : function() {
-			_tableManipulator.buildTodoTable(todoLogic.getAllTodo());
+			_tableManipulator.appendAllTodo(todoLogic.getAllTodo());
 		}
 	};
 	return controller;
