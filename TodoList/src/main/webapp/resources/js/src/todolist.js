@@ -18,6 +18,7 @@ todolist.logic = (function(window) {
 		 * @returns ID
 		 */
 		getNextId : function() {
+			// 数値に変換できる文字列に対して+を頭に付けると数値に変換される。
 			var id = +localStorage.getItem(KEY_SEQ_TODO_STRAGE);
 			localStorage.setItem(KEY_SEQ_TODO_STRAGE, id + 1);
 			return id;
@@ -29,11 +30,7 @@ todolist.logic = (function(window) {
 		 * @param {Object} todo key、limit、taskを持つプロパティ
 		 */
 		saveTodo : function(todo) {
-			var target = todo;
-			if (typeof target === 'object') {
-				target = JSON.stringify(todo);
-			}
-			localStorage.setItem(todo.key, target);
+			localStorage.setItem(todo.key, JSON.stringify(todo));
 		},
 		/**
 		 * todoを取得する.
@@ -130,7 +127,7 @@ todolist.controller = (function(window) {
 			appendHtml += '<td>' + no + '</td>';
 			appendHtml += '<td>' + this.escapeHtml(todo.limit) + '</td>';
 			appendHtml += '<td>' + this.escapeHtml(todo.task) + '</td>';
-			appendHtml += '<td><button id  ="btn-remove-todo-' + todo.key + '" class="btn-remove-todo">削除</button></td>';
+			appendHtml += '<td><button id  ="btn-remove-todo-' + todo.key + '" class="btn-remove-todo btn btn-warning">削除</button></td>';
 			appendHtml += '</tr>';
 			return appendHtml;
 		}
