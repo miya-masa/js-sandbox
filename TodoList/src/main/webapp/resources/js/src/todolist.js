@@ -13,7 +13,7 @@ todolist.logic = (function(window) {
 	// 公開するロジック
 	var logic = {
 		/**
-		 * 登録時のIDを取得する
+		 * シーケンスのIDを取得する
 		 * 
 		 * @returns ID
 		 */
