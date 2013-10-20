@@ -13,23 +13,18 @@ TestCase("hello world test", {
 
 TestCase("dom test", {
 	setUp : function() {
-		var $body = $("body");
-		var response = $.ajax({
-			async : false,
-			url : "/test/serve/fixture.html"
-		});
-		$body.append($(response.responseText));
-		jstestdriver.console.log("JsTestDriver", response.responseText);
+		TestUtils.refreshFixture($("body"));
+		TestUtils.ready();
 	},
 	testButtonClick : function() {
 		var button = document.getElementById("button-id");
-		assertEquals(true, button);
-		$("button-id").trigger("click");
+		assertEquals(false, button === undefined);
+		$("#button-id").trigger("click");
+		assertEquals(false, document.getElementById("div-add") === null);
 		var $added = $("#div-add");
-		assertEquals(true, $added);
 		assertEquals("add", $added.text());
 	},
-	tearDown : function() {
-		$("body").empty();
+	testButtonClick2 : function() {
+		assertEquals(true, document.getElementById("div-add") === null);
 	}
 });

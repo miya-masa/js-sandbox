@@ -75,7 +75,41 @@ testem
 	Mocha、Jasmine、QUnitに対応
 カバレッジ
 
-
+JSTestDriverとSinonJsを利用したテスト
+JSTestDriver
+	導入方法
+		jar実行
+	利用方法
+		設定ファイル作成
+		サーバー起動、キャプチャリング
+		テストの実行
+	eclipseプラグインを導入する
+		JstestDriverを入れてeclipseで実行
+	テストコードTDDで書いてみる
+		引数に名前を与えると"Hello ○○!!"という文字列を生成する部品を使うテストコードを書く
+		テストが失敗することを確認
+		プロダクトコードを作成
+		テストが成功するまで繰り返す。
+	DOM操作のテスト
+		dom要素を与えると子要素"<div>Hello ○○!!</div>"という文字列を追加する。
+		TDDで書いてみる	
+	UIイベントのテスト
+		SinonJSを使用して初期化を遅らせる
+		setUpメソッド内で初期化処理
+			DOMをBODYに追加
+				コメントを利用しDOMを追加
+				Fixtureを利用しDOMを追加
+			SinonJSの機能を利用し初期化メソッドを実行
+		TDDでテストコードを書く
+	非同期のテスト
+		queue(function(callbacks){})内にテストを記述
+		callbacks.add(function)で引数のfunctionが起動されない限りqueue内のファンクションは次を実行しない
+		queue()を複数定義し非同期のテストを行う
+		callbacks.noop()でなにも処理をしない関数を準備
+		callbacks.add(function,count)でfunctionが何回呼ばれたら次のqueueを処理するか決定できる
+		callbacks.addErrback()これが呼ばれたらテスト失敗
+		
+		
 
 テスト概要5分
 QUnitの使い方50分
