@@ -63,18 +63,58 @@ describe('todoロジック、', function() {
     });
 });
 
-describe('todoコントローラ', function() {
-    var target = todolist.controller
+describe('todoコントローラの初期表示機能、', function() {
+    'use strict';
+    var target = todolist.controller;
     beforeEach(function() {
         setFixtures('<button id = "btn-regist"></button>');
     });
-    it('initEventHandlerで登録ボタン、削除ボタン、全削除ボタンにイベントをバインドする。', function() {
-        var spyRegistClick = spyOnEvent('#btn-regist', 'click');
+    it('initEventHandlerで登録ボタンにイベントをバインドする。', function() {
+        var spyObj = jasmine.createSpyObj('mock', [ 'on' ]);
+        var dummyObj = jasmine.createSpyObj('mock', [ 'on' ]);
+        spyOn(window, '$').andCallFake(function(args) {
+            if (args === '#btn-regist') {
+                return spyObj;
+            }
+            return dummyObj;
+        });
 
         target.initEventHandler();
 
-        $('#btn-regist').click();
-        expect(spyRegistClick).toHaveBeenTriggered();
+        expect($).toHaveBeenCalledWith('#btn-regist');
+        expect(spyObj.on).toHaveBeenCalledWith('click', jasmine.any(Function));
+    });
+
+    it('initEventHandlerで削除ボタンにイベントをバインドする。', function() {
+        var spyObj = jasmine.createSpyObj('mock', [ 'on' ]);
+        var dummyObj = jasmine.createSpyObj('mock', [ 'on' ]);
+        spyOn(window, '$').andCallFake(function(args) {
+            if (args === document) {
+                return spyObj;
+            }
+            return dummyObj;
+        });
+
+        target.initEventHandler();
+
+        expect($).toHaveBeenCalledWith(document);
+        expect(spyObj.on).toHaveBeenCalledWith('click', '.btn-remove-todo', jasmine.any(Function));
+    });
+
+    it('initEventHandlerで全削除ボタンにイベントをバインドする。', function() {
+        var spyObj = jasmine.createSpyObj('mock', [ 'on' ]);
+        var dummyObj = jasmine.createSpyObj('mock', [ 'on' ]);
+        spyOn(window, '$').andCallFake(function(args) {
+            if (args === '#btn-remove-all-todo') {
+                return spyObj;
+            }
+            return dummyObj;
+        });
+
+        target.initEventHandler();
+
+        expect($).toHaveBeenCalledWith('#btn-remove-all-todo');
+        expect(spyObj.on).toHaveBeenCalledWith('click', jasmine.any(Function));
     });
 
 });
