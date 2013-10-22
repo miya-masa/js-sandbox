@@ -1,6 +1,7 @@
 describe('todoロジック、', function() {
     'use strict';
     var target = todolist.logic;
+
     beforeEach(function() {
         localStorage.clear();
     });
@@ -63,56 +64,59 @@ describe('todoロジック、', function() {
     });
 });
 
-describe('todoコントローラの初期表示機能、', function() {
+describe('todoコントローラのイベントハンドラ登録、', function() {
     'use strict';
     var target = todolist.controller;
-    beforeEach(function() {
-        setFixtures('<button id = "btn-regist"></button>');
-    });
-    it('initEventHandlerで登録ボタンにイベントをバインドする。', function() {
+
+    function spy$AndMockOn(selector) {
+        // 対象セレクタに対するターゲットスパイを作成
         var spyObj = jasmine.createSpyObj('mock', [ 'on' ]);
-        var dummyObj = jasmine.createSpyObj('mock', [ 'on' ]);
+        // 一時的に避難
         spyOn(window, '$').andCallFake(function(args) {
-            if (args === '#btn-regist') {
+            if (args === selector) {
                 return spyObj;
             }
-            return dummyObj;
+            // ターゲット以外は本物を返す
+            return jQuery(args);
         });
+        // jQueryオブジェクトのスパイ属性
+        return spyObj;
+    }
 
+    beforeEach(function() {
+        $('*').off();
+    });
+
+    afterEach(function() {
+        $('*').off();
+    });
+
+    it('initEventHandlerで登録ボタンにイベントをバインドする。', function() {
+        // 準備
+        var spyObj = spy$AndMockOn('#btn-regist');
+        // 実行
         target.initEventHandler();
-
+        // 検証
         expect($).toHaveBeenCalledWith('#btn-regist');
         expect(spyObj.on).toHaveBeenCalledWith('click', jasmine.any(Function));
     });
 
     it('initEventHandlerで削除ボタンにイベントをバインドする。', function() {
-        var spyObj = jasmine.createSpyObj('mock', [ 'on' ]);
-        var dummyObj = jasmine.createSpyObj('mock', [ 'on' ]);
-        spyOn(window, '$').andCallFake(function(args) {
-            if (args === document) {
-                return spyObj;
-            }
-            return dummyObj;
-        });
-
+        // 準備
+        var spyObj = spy$AndMockOn(document);
+        // 実行
         target.initEventHandler();
-
+        // 検証
         expect($).toHaveBeenCalledWith(document);
         expect(spyObj.on).toHaveBeenCalledWith('click', '.btn-remove-todo', jasmine.any(Function));
     });
 
     it('initEventHandlerで全削除ボタンにイベントをバインドする。', function() {
-        var spyObj = jasmine.createSpyObj('mock', [ 'on' ]);
-        var dummyObj = jasmine.createSpyObj('mock', [ 'on' ]);
-        spyOn(window, '$').andCallFake(function(args) {
-            if (args === '#btn-remove-all-todo') {
-                return spyObj;
-            }
-            return dummyObj;
-        });
-
+        // 準備
+        var spyObj = spy$AndMockOn('#btn-remove-all-todo');
+        // 実行
         target.initEventHandler();
-
+        // 検証
         expect($).toHaveBeenCalledWith('#btn-remove-all-todo');
         expect(spyObj.on).toHaveBeenCalledWith('click', jasmine.any(Function));
     });
