@@ -1,6 +1,7 @@
 describe('todoロジック、', function() {
     'use strict';
     var target = todolist.logic;
+
     beforeEach(function() {
         localStorage.clear();
     });
@@ -65,6 +66,10 @@ describe('todoロジック、', function() {
         expect(localStorage.getItem(target.seqKey)).toEqual('0');
     });
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> branch 'master' of https://github.com/miya-masa/js-sandbox.git
 describe('todoコントローラのイベントハンドラ登録、', function() {
     'use strict';
     var target = todolist.controller;
