@@ -24,25 +24,55 @@
         mainRegion: '#main-region'
     });
 
-    ContactManager.Contact = Backbone.Model.extend({});
 
-    // �ǉ�
-    ContactManager.ContactView = Marionette.ItemView.extend({
-        template: '#contact-template'
+    ContactManager.Contact = Backbone.Model.extend({});
+    ContactManager.ContactCollection = Backbone.Collection.extend({
+        model: ContactManager.Contact,
+        comparator: 'firstName'
+    });
+
+    // 追加
+    ContactManager.ContactItemView = Marionette.ItemView.extend({
+        tagName: 'li',
+        template: '#contact-list-item-template'
+    });
+    // CollectionView
+    ContactManager.ContactsView = Marionette.CollectionView.extend({
+        tagName: 'ul', // デフォルトでは div タグになります。
+        childView: ContactManager.ContactItemView
     });
 
     ContactManager.onStart = function() {
-        var alice = new ContactManager.Contact({
+
+        // CollectionはArrayの中にObjectでモデルをつっこみます。
+        var contacts = new ContactManager.ContactCollection([{
+            firstName: 'Bob',
+            lastName: 'Brigham',
+            phoneNumber: '555-0163'
+        }, {
             firstName: 'Alice',
             lastName: 'Arten',
             phoneNumber: '555-0184'
+        }, {
+            firstName: 'Charlie',
+            lastName: 'Campbell',
+            phoneNumber: '555-0129'
+        }]);
+        // CollectionViewのインスタンス
+        var contactsListView = new ContactManager.ContactsView({
+            collection: contacts
         });
-        // view�̃C���X�^���X
-        var aliceView = new ContactManager.ContactView({
-            model: alice
-        });
-        // mainRegion��view��\��
-        ContactManager.mainRegion.show(aliceView);
+        //    var alice = new ContactManager.Contact({
+        //        firstName: 'Alice',
+        //        lastName: 'Arten',
+        //        phoneNumber: '555-0184'
+        //    });
+        // viewのインスタンス
+        //    var aliceView = new ContactManager.ContactView({
+        //        model: alice
+        //    });
+        // mainRegionにviewを表示
+        ContactManager.mainRegion.show(contactsListView);
 
         console.log('Hello Marionette!!');
     };
