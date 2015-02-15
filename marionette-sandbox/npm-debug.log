@@ -1,0 +1,258 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'backbone',
+1 verbose cli   'backbone-marionette',
+1 verbose cli   'underscore',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose readDependencies using package.json deps
+5 verbose cache add [ 'backbone', null ]
+6 verbose cache add name=undefined spec="backbone" args=["backbone",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'backbone',
+7 verbose parsed url   path: 'backbone',
+7 verbose parsed url   href: 'backbone' }
+8 verbose cache add [ 'backbone-marionette', null ]
+9 verbose cache add name=undefined spec="backbone-marionette" args=["backbone-marionette",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'backbone-marionette',
+10 verbose parsed url   path: 'backbone-marionette',
+10 verbose parsed url   href: 'backbone-marionette' }
+11 verbose cache add [ 'underscore', null ]
+12 verbose cache add name=undefined spec="underscore" args=["underscore",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'underscore',
+13 verbose parsed url   path: 'underscore',
+13 verbose parsed url   href: 'underscore' }
+14 silly lockFile 4da38e79-backbone backbone
+15 verbose lock backbone C:\Users\MASAYUKI\AppData\Roaming\npm-cache\4da38e79-backbone.lock
+16 silly lockFile 561e18ac-backbone-marionette backbone-marionette
+17 verbose lock backbone-marionette C:\Users\MASAYUKI\AppData\Roaming\npm-cache\561e18ac-backbone-marionette.lock
+18 silly lockFile 64bc6893-underscore underscore
+19 verbose lock underscore C:\Users\MASAYUKI\AppData\Roaming\npm-cache\64bc6893-underscore.lock
+20 silly lockFile 4da38e79-backbone backbone
+21 silly lockFile 4da38e79-backbone backbone
+22 silly lockFile 64bc6893-underscore underscore
+23 silly lockFile 64bc6893-underscore underscore
+24 silly lockFile 561e18ac-backbone-marionette backbone-marionette
+25 silly lockFile 561e18ac-backbone-marionette backbone-marionette
+26 verbose addNamed [ 'backbone', '' ]
+27 verbose addNamed [ null, '*' ]
+28 silly lockFile e1fd1579-backbone backbone@
+29 verbose lock backbone@ C:\Users\MASAYUKI\AppData\Roaming\npm-cache\e1fd1579-backbone.lock
+30 verbose addNamed [ 'underscore', '' ]
+31 verbose addNamed [ null, '*' ]
+32 silly lockFile 7629b758-underscore underscore@
+33 verbose lock underscore@ C:\Users\MASAYUKI\AppData\Roaming\npm-cache\7629b758-underscore.lock
+34 verbose addNamed [ 'backbone-marionette', '' ]
+35 verbose addNamed [ null, '*' ]
+36 silly lockFile 36f76330-backbone-marionette backbone-marionette@
+37 verbose lock backbone-marionette@ C:\Users\MASAYUKI\AppData\Roaming\npm-cache\36f76330-backbone-marionette.lock
+38 silly addNameRange { name: 'backbone', range: '*', hasData: false }
+39 silly addNameRange { name: 'underscore', range: '*', hasData: false }
+40 silly addNameRange { name: 'backbone-marionette', range: '*', hasData: false }
+41 verbose request where is /backbone-marionette
+42 verbose request registry https://registry.npmjs.org/
+43 verbose request id a9c665c33483d1ae
+44 verbose url raw /backbone-marionette
+45 verbose url resolving [ 'https://registry.npmjs.org/', './backbone-marionette' ]
+46 verbose url resolved https://registry.npmjs.org/backbone-marionette
+47 verbose request where is https://registry.npmjs.org/backbone-marionette
+48 info trying registry request attempt 1 at 16:44:14
+49 http GET https://registry.npmjs.org/backbone-marionette
+50 verbose request where is /underscore
+51 verbose request registry https://registry.npmjs.org/
+52 verbose url raw /underscore
+53 verbose url resolving [ 'https://registry.npmjs.org/', './underscore' ]
+54 verbose url resolved https://registry.npmjs.org/underscore
+55 verbose request where is https://registry.npmjs.org/underscore
+56 info trying registry request attempt 1 at 16:44:14
+57 verbose etag "CLPBREJL1O84YDWL8A4ZNWNDF"
+58 http GET https://registry.npmjs.org/underscore
+59 verbose request where is /backbone
+60 verbose request registry https://registry.npmjs.org/
+61 verbose url raw /backbone
+62 verbose url resolving [ 'https://registry.npmjs.org/', './backbone' ]
+63 verbose url resolved https://registry.npmjs.org/backbone
+64 verbose request where is https://registry.npmjs.org/backbone
+65 info trying registry request attempt 1 at 16:44:14
+66 verbose etag "13JMJ86CU8GZMB9R5D3FIMDOK"
+67 http GET https://registry.npmjs.org/backbone
+68 http 304 https://registry.npmjs.org/underscore
+69 silly registry.get cb [ 304,
+69 silly registry.get   { date: 'Sun, 15 Feb 2015 07:44:13 GMT',
+69 silly registry.get     server: 'Apache',
+69 silly registry.get     via: '1.1 varnish',
+69 silly registry.get     'last-modified': 'Sun, 15 Feb 2015 07:43:44 GMT',
+69 silly registry.get     'cache-control': 'max-age=60',
+69 silly registry.get     etag: '"CLPBREJL1O84YDWL8A4ZNWNDF"',
+69 silly registry.get     age: '32',
+69 silly registry.get     'x-served-by': 'cache-ty67-TYO',
+69 silly registry.get     'x-cache': 'HIT',
+69 silly registry.get     'x-cache-hits': '3',
+69 silly registry.get     'x-timer': 'S1423986253.754972,VS0,VE0',
+69 silly registry.get     vary: 'Accept',
+69 silly registry.get     'content-length': '0',
+69 silly registry.get     'keep-alive': 'timeout=10, max=50',
+69 silly registry.get     connection: 'Keep-Alive' } ]
+70 verbose etag https://registry.npmjs.org/underscore from cache
+71 silly addNameRange number 2 { name: 'underscore', range: '*', hasData: true }
+72 silly addNameRange versions [ 'underscore',
+72 silly addNameRange   [ '1.0.3',
+72 silly addNameRange     '1.0.4',
+72 silly addNameRange     '1.1.0',
+72 silly addNameRange     '1.1.1',
+72 silly addNameRange     '1.1.2',
+72 silly addNameRange     '1.1.3',
+72 silly addNameRange     '1.1.4',
+72 silly addNameRange     '1.1.5',
+72 silly addNameRange     '1.1.6',
+72 silly addNameRange     '1.1.7',
+72 silly addNameRange     '1.2.0',
+72 silly addNameRange     '1.2.1',
+72 silly addNameRange     '1.2.2',
+72 silly addNameRange     '1.2.3',
+72 silly addNameRange     '1.2.4',
+72 silly addNameRange     '1.3.0',
+72 silly addNameRange     '1.3.1',
+72 silly addNameRange     '1.3.2',
+72 silly addNameRange     '1.3.3',
+72 silly addNameRange     '1.4.0',
+72 silly addNameRange     '1.4.1',
+72 silly addNameRange     '1.4.2',
+72 silly addNameRange     '1.4.3',
+72 silly addNameRange     '1.4.4',
+72 silly addNameRange     '1.5.0',
+72 silly addNameRange     '1.5.1',
+72 silly addNameRange     '1.5.2',
+72 silly addNameRange     '1.6.0',
+72 silly addNameRange     '1.7.0' ] ]
+73 verbose addNamed [ 'underscore', '1.7.0' ]
+74 verbose addNamed [ '1.7.0', '1.7.0' ]
+75 silly lockFile 900da168-underscore-1-7-0 underscore@1.7.0
+76 verbose lock underscore@1.7.0 C:\Users\MASAYUKI\AppData\Roaming\npm-cache\900da168-underscore-1-7-0.lock
+77 silly lockFile 900da168-underscore-1-7-0 underscore@1.7.0
+78 silly lockFile 900da168-underscore-1-7-0 underscore@1.7.0
+79 silly lockFile 7629b758-underscore underscore@
+80 silly lockFile 7629b758-underscore underscore@
+81 http 404 https://registry.npmjs.org/backbone-marionette
+82 verbose headers { date: 'Sun, 15 Feb 2015 07:44:14 GMT',
+82 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+82 verbose headers   'content-type': 'application/json',
+82 verbose headers   'cache-control': 'max-age=0',
+82 verbose headers   'content-length': '52',
+82 verbose headers   'accept-ranges': 'bytes',
+82 verbose headers   via: '1.1 varnish',
+82 verbose headers   age: '0',
+82 verbose headers   'x-served-by': 'cache-ty66-TYO',
+82 verbose headers   'x-cache': 'MISS',
+82 verbose headers   'x-cache-hits': '0',
+82 verbose headers   'x-timer': 'S1423986253.754692,VS0,VE458',
+82 verbose headers   'keep-alive': 'timeout=10, max=50',
+82 verbose headers   connection: 'Keep-Alive' }
+83 silly registry.get cb [ 404,
+83 silly registry.get   { date: 'Sun, 15 Feb 2015 07:44:14 GMT',
+83 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+83 silly registry.get     'content-type': 'application/json',
+83 silly registry.get     'cache-control': 'max-age=0',
+83 silly registry.get     'content-length': '52',
+83 silly registry.get     'accept-ranges': 'bytes',
+83 silly registry.get     via: '1.1 varnish',
+83 silly registry.get     age: '0',
+83 silly registry.get     'x-served-by': 'cache-ty66-TYO',
+83 silly registry.get     'x-cache': 'MISS',
+83 silly registry.get     'x-cache-hits': '0',
+83 silly registry.get     'x-timer': 'S1423986253.754692,VS0,VE458',
+83 silly registry.get     'keep-alive': 'timeout=10, max=50',
+83 silly registry.get     connection: 'Keep-Alive' } ]
+84 silly lockFile 36f76330-backbone-marionette backbone-marionette@
+85 silly lockFile 36f76330-backbone-marionette backbone-marionette@
+86 http 200 https://registry.npmjs.org/backbone
+87 silly registry.get cb [ 200,
+87 silly registry.get   { date: 'Sun, 15 Feb 2015 07:44:14 GMT',
+87 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+87 silly registry.get     etag: '"ADDFC5NX79Z6LW0LM2A6ITFX1"',
+87 silly registry.get     'content-type': 'application/json',
+87 silly registry.get     'cache-control': 'max-age=60',
+87 silly registry.get     'content-length': '21266',
+87 silly registry.get     'accept-ranges': 'bytes',
+87 silly registry.get     via: '1.1 varnish',
+87 silly registry.get     age: '0',
+87 silly registry.get     'x-served-by': 'cache-ty68-TYO',
+87 silly registry.get     'x-cache': 'HIT',
+87 silly registry.get     'x-cache-hits': '1',
+87 silly registry.get     'x-timer': 'S1423986253.750954,VS0,VE482',
+87 silly registry.get     vary: 'Accept',
+87 silly registry.get     'keep-alive': 'timeout=10, max=50',
+87 silly registry.get     connection: 'Keep-Alive' } ]
+88 silly addNameRange number 2 { name: 'backbone', range: '*', hasData: true }
+89 silly addNameRange versions [ 'backbone',
+89 silly addNameRange   [ '0.1.1',
+89 silly addNameRange     '0.1.2',
+89 silly addNameRange     '0.2.0',
+89 silly addNameRange     '0.3.0',
+89 silly addNameRange     '0.3.1',
+89 silly addNameRange     '0.3.2',
+89 silly addNameRange     '0.3.3',
+89 silly addNameRange     '0.5.0',
+89 silly addNameRange     '0.5.1',
+89 silly addNameRange     '0.5.2',
+89 silly addNameRange     '0.5.3',
+89 silly addNameRange     '0.9.0',
+89 silly addNameRange     '0.9.1',
+89 silly addNameRange     '0.9.2',
+89 silly addNameRange     '0.9.9',
+89 silly addNameRange     '0.9.10',
+89 silly addNameRange     '1.0.0',
+89 silly addNameRange     '1.1.0',
+89 silly addNameRange     '1.1.1',
+89 silly addNameRange     '1.1.2' ] ]
+90 verbose addNamed [ 'backbone', '1.1.2' ]
+91 verbose addNamed [ '1.1.2', '1.1.2' ]
+92 silly lockFile bd005187-backbone-1-1-2 backbone@1.1.2
+93 verbose lock backbone@1.1.2 C:\Users\MASAYUKI\AppData\Roaming\npm-cache\bd005187-backbone-1-1-2.lock
+94 silly lockFile bd005187-backbone-1-1-2 backbone@1.1.2
+95 silly lockFile bd005187-backbone-1-1-2 backbone@1.1.2
+96 silly lockFile e1fd1579-backbone backbone@
+97 silly lockFile e1fd1579-backbone backbone@
+98 error 404 404 Not Found: backbone-marionette
+98 error 404
+98 error 404 'backbone-marionette' is not in the npm registry.
+98 error 404 You should bug the author to publish it
+98 error 404
+98 error 404 Note that you can also install from a
+98 error 404 tarball, folder, or http url, or git url.
+99 error System Windows_NT 6.2.9200
+100 error command "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "backbone" "backbone-marionette" "underscore" "--save"
+101 error cwd c:\Users\MASAYUKI\git\js_sandbox\marionette-sandbox
+102 error node -v v0.10.35
+103 error npm -v 1.4.28
+104 error code E404
+105 verbose exit [ 1, true ]
