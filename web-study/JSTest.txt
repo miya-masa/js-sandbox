@@ -1,0 +1,140 @@
+QUnit
+	シンプルなテスト実行。APIは弱いが簡単。
+	JUnit形式にxml出力するアドオン有り
+	http://kozy4324.github.io/blog/2012/10/27/qunit/
+	apiの紹介
+		assert
+		基本てきに引数は(actual,expected,message)
+			deepEqual/equal
+			==での比較Deepはオブジェクトの中身まで
+			notDeepEqual/notEqual
+			ok
+			正しいかどうか
+			strictEqual/notStrictEqual
+				===での比較
+			throws(block,Expect,message)
+				例外のチェック
+		非同期テスト
+			asyncTest(name,expected,test)
+				start()が呼ばれるまで次のテストメソッドの実行を制御
+			start()
+				次のテストメソッド実行OKの合図
+			stop()
+				asyncTestを使わない場合メソッドの最後でstopする
+		コールバック
+			begin
+				テスト開始で一回
+			done
+				テスト終了で一回
+			log
+				assertごとに呼び出し
+			moduleDone
+				module終了
+			moduleStart
+				module開始
+			testDone
+				各テスト終了
+			testStart
+				各テスト開始
+		テスト
+		 	expect()
+		 		アサートの呼び出し回数
+		 	module
+		 		モジュール設定(テストのグループ化)
+		 	test
+		 		通常のテスト
+	DOM操作のテスト
+		qunit-fixtureを利用する。
+		qunit-fixture内はテスト毎で独立しておりテストで変更されたDOM操作は他のテストに影響しない
+	ユーザアクションをテストする
+		ユーザアクションのテストはjquery.trigger(event)を利用する
+		リンクなど、ブラウザ操作で画面が変わってしまう場合などはjquery.triggerHandler(event)を利用する。
+		これはバインドされたハンドラのコールバックのみを実行する。
+	コールバックの実行を確認
+		expectを利用する。
+	非同期のテスト
+		asyncTestを利用する。
+	テストのグループ化
+		moduleを利用する
+	
+Jasmine
+	しっかりとしたテストフレームワーク
+	学習コストがやや高め。こっちのがいろいろできる。
+jenkins
+phantomjs
+	WebKitのヘッドレスJS
+jstestDriver
+	QUnitと一緒に使う場合QunitAdapterを利用するが
+	アサート関数が一部抜ける
+	start(),stop()の非同期処理のテストはjsUnitMockTimeout.js
+JSのモック
+	Sinon.js
+	JsMockit
+testem
+	実行の自動化ツール
+	Mocha、Jasmine、QUnitに対応
+カバレッジ
+
+JSTestDriverとSinonJsを利用したテスト
+JSTestDriver
+	導入方法
+		jar実行
+	利用方法
+		設定ファイル作成
+		サーバー起動、キャプチャリング
+		テストの実行
+	eclipseプラグインを導入する
+		JstestDriverを入れてeclipseで実行
+	テストコードTDDで書いてみる
+		引数に名前を与えると"Hello ○○!!"という文字列を生成する部品を使うテストコードを書く
+		テストが失敗することを確認
+		プロダクトコードを作成
+		テストが成功するまで繰り返す。
+	DOM操作のテスト
+		dom要素を与えると子要素"<div>Hello ○○!!</div>"という文字列を追加する。
+		TDDで書いてみる	
+	UIイベントのテスト
+		SinonJSを使用して初期化を遅らせる
+		setUpメソッド内で初期化処理
+			DOMをBODYに追加
+				コメントを利用しDOMを追加
+				Fixtureを利用しDOMを追加
+			SinonJSの機能を利用し初期化メソッドを実行
+		TDDでテストコードを書く
+	非同期のテスト
+		queue(function(callbacks){})内にテストを記述
+		callbacks.add(function)で引数のfunctionが起動されない限りqueue内のファンクションは次を実行しない
+		queue()を複数定義し非同期のテストを行う
+		callbacks.noop()でなにも処理をしない関数を準備
+		callbacks.add(function,count)でfunctionが何回呼ばれたら次のqueueを処理するか決定できる
+		callbacks.addErrback()これが呼ばれたらテスト失敗
+		
+		
+
+テスト概要5分
+QUnitの使い方50分
+	Qunitの説明5分
+		テストコードを書く5分
+	DOMテスト説明5分
+		テストコードを書く10分
+	ユーザアクションテストの説明5分
+		テストコードを書く5分
+	非同期テストの説明5分
+		テストコードを書く5分
+	その他説明出来なかったこと 5分
+		module、callback
+		
+(SinonJsの使い方20分)
+	spy5分
+	stub5分
+	mock5分
+(testemの利用10分)
+phantomjsの説明3分
+	phantomjsの利用10分
+(Jscoverageの利用10分)
+Jenkinsにのせる10分
+	junit形式の出力
+説明できなかった事10分
+
+90分
+	

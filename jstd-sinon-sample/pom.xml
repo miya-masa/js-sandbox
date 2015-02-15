@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>jp.co.myms.jstd</groupId>
+	<artifactId>jstd-sinon-sample</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<properties>
+		<encoding>UTF-8</encoding>
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.googlecode.jstd-maven-plugin</groupId>
+				<artifactId>jstd-maven-plugin</artifactId>
+				<version>1.3.5.1</version>
+				<configuration>
+				<testOutput>output</testOutput>
+				<browser>C:/Program Files/Google/Chrome/Application/chrome.exe</browser>
+				<port>4224</port>
+				<runnerMode>DEBUG</runnerMode>
+				<verbose>true</verbose>
+				</configuration>
+				<executions>
+					<execution>
+						<id>runt-jstd</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<inherited>false</inherited>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

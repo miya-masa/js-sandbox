@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="Chrome_280150095_Windows.hello world test" errors="0" failures="0" tests="2" time="0.003">
+<testcase classname="Chrome_280150095_Windows.hello world test" name="testSpecial" time="0.001"/>
+<testcase classname="Chrome_280150095_Windows.hello world test" name="testSuccess" time="0.002"/>
+</testsuite>
